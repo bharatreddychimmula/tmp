@@ -1,4 +1,4 @@
-import tabulate
+from tabulate import tabulate
 
 table = []
 table.append([1,'PASSED','FAILED','NA'])
