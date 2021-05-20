@@ -9,4 +9,6 @@ table.append([5,'FAILED','FAILED','NA'])
 
 with open("/Users/chimmulab/sample.html", "w") as f:
   f.write(tabulate(table, ['ID', 'S1', 'S2', 'S3'], tablefmt="unsafehtml"))
-  f.write("<script src='html_view.js' ></script>")
+  with open("html_view.js") as h:
+      f.write("<script>{0}</script>".format(h.read()))
+  
